@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="oklejanie samochodów Piła, folia PPF Piła, zmiana koloru auta, przyciemnianie szyb Piła, car wrapping Piła, detailing samochodowy Piła, regeneracja lamp Piła, auto detailing, ochrona lakieru, folia ochronna PPF">
+        <meta name="description" content="Oklejanie samochodów w Pile – folia PPF, zmiana koloru auta, przyciemnianie szyb i detailing. Chroń lakier i nadaj pojazdowi nowy wygląd! Skontaktuj się z nami już dziś.">
+        <meta name="author" content="Wiktor Karykowski">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Oklejanie samochodów Piła - Folia PPF, Przyciemnianie szyb, Zmiana koloru auta</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">    
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <script>
+            var script = document.createElement("script");
+            script.src = "script.js?v=" + Date.now(); // Dodaje unikalny timestamp
+            document.head.appendChild(script);
+        </script>        
+        <script src="script.js"></script>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    </head>
+    <body>
+        <header>
+            <button id="menu-toggle">☰</button>
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">Strona Główna</a></li>
+                    <li><a href="index.html#services">Usługi</a></li>
+                    <li><a href="index.html#about">O nas</a></li>
+                    <li><a href="#gallery">Realizacje</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="home" class="slide homeslide"> 
+                <div id="home-wrapper">
+                    <div id="home-hero-container">
+                        <p class="hero hero1">Performance</p>
+                        <p class="hero hero2">Car Wrap</p>
+                        <p class="hero hero3">Studio</p>
+                    </div>
+                    <div id="home-right-container">
+                        <p class="hero">Nowy wygląd bez lakierowania.</p>
+                        <p class="hero">Sprytne, prawda? 🚗✨</p>
+                        <br>
+                        <p class="hero">Gotowy na zmiany?</p>
+                        <button onclick="location.href='#contact'" class="hero coverable" id="contact-button">
+                            Skontaktuj się z nami!
+                        </button>
+                    </div>
+                </div>
+                <div class="coverable" id="scroll-down-label" onclick="scrollToNextSection()">&#9660; Dowiedz się więcej! &#9660;</div>
+            </section>
+
+            <section id="services" class="reveal slide serviceslide"> 
+                <h1>Czym się zajmujemy?</h1>
+                <div class="service-container">
+                    <div class="service-item">
+                        <i class="fas fa-car"></i>
+                        <span>Oklejanie aut folią PPF <span id="vanished">Piła</span></span>
+                        <label>Folia ochronna PPF skutecznie zabezpiecza lakier przed zarysowaniami, odpryskami i działaniem czynników atmosferycznych. To idealne rozwiązanie dla osób, które chcą zachować perfekcyjny wygląd swojego samochodu na dłużej. Stosujemy wysokiej jakości folie, zapewniające trwałość i estetykę.</label>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>Zmiana koloru auta <span id="vanished">Piła</span></span>
+                        <label>Zmiana koloru auta poprzez oklejenie to szybki i efektowny sposób na odświeżenie wyglądu Twojego pojazdu. Dzięki szerokiej gamie kolorów i efektów możesz dopasować styl samochodu do swoich indywidualnych preferencji, jednocześnie chroniąc oryginalną lakier.</label>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-tint"></i>
+                        <span>Przyciemnianie szyb <span id="vanished">Piła</span></span>
+                        <label>Przyciemnianie szyb poprawia estetykę pojazdu, zwiększa prywatność i chroni wnętrze przed nadmiernym nagrzewaniem. Korzystamy z profesjonalnych folii, które zapewniają trwałość i skuteczność. Zabieg ten dodatkowo zwiększa komfort jazdy oraz redukuje odblaski.</label>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-soap"></i>
+                        <span>Pranie tapicerki <span id="vanished">Piła</span></span>
+                        <label>Profesjonalne pranie tapicerki usuwa zabrudzenia, plamy i nieprzyjemne zapachy, przywracając wnętrzu auta świeżość. Stosujemy skuteczne i bezpieczne środki czyszczące, które nie niszczą materiałów. To doskonały sposób na odświeżenie i poprawę komfortu podróży.</label>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Regeneracja lamp <span id="vanished">Piła</span></span>
+                        <label>Matowe i zmatowiałe reflektory obniżają widoczność i bezpieczeństwo jazdy, dlatego warto je zregenerować. Przywracamy im pełną przejrzystość, co poprawia wygląd pojazdu i jakość oświetlenia. Zabieg jest tańszą alternatywą dla wymiany lamp na nowe.</label>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-wrench"></i>
+                        <span>Dechroming <span id="vanished">Piła</span></span>
+                        <label>Usługa dechromingu pozwala na zmianę wyglądu chromowanych elementów, nadając autu bardziej agresywny i nowoczesny charakter. Oklejamy detale folią lub przeprowadzamy malowanie, dostosowane do indywidualnych oczekiwań. To idealne rozwiązanie dla osób ceniących unikalny styl.</label>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-paint-brush"></i>
+                        <span>Korekta lakieru <span id="vanished">Piła</span></span>
+                        <label>Korekta lakieru usuwa rysy, hologramy i niedoskonałości, przywracając głębię i blask powłoce lakierniczej. Pracujemy na wysokiej jakości pastach polerskich, które skutecznie odświeżają wygląd auta. To doskonałe przygotowanie lakieru przed nałożeniem powłok ochronnych.</label>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="about" class="slide aboutslide"> 
+                <h1 id="shadowed">Kim jesteśmy?</h1>
+                <div id="girls-container">
+                    <div id="oliwia" class="girl">
+                        <div class="left-section">
+                            <img src="image002.jpeg" class="profile-image">
+                        </div>
+                        <div class="right-section">
+                            <h2 class="name">Oliwia</h2>
+                            <p class="description">Jesteśmy dwiema ambitnymi dziewczynami, które połączyły pasję do motoryzacji z profesjonalnymi usługami auto detailingu. Zajmujemy się oklejaniem samochodów, pielęgnacją lakieru i wieloma innymi zabiegami.</p>   
+                        </div>
+                    </div>
+                    <div id="natalia" class="girl"> 
+                        <div class="right-section">
+                            <h2 class="name">Natalia</h2>
+                            <p class="description">Stawiamy na najwyższą jakość, precyzję i indywidualne podejście do każdego klienta. Korzystamy z nowoczesnych technik i wysokiej klasy materiałów, aby każde auto wyglądało jak nowe.</p>
+                            <br>
+                        </div>   
+                        <div class="left-section">
+                            <img src="image001.jpeg" class="profile-image">
+                        </div>
+                    </div>
+                    <h2 id="shadowed">Zapraszamy do współpracy!</h2>
+                </div>
+            </section>
+            <section id="gallery" class="slide">
+                <div id="portfolio-wrapper">
+                    <h1>Nasze realizacje</h1>
+                </div>
+                    <div class="gallery" id="portfolio-images">
+                        <img src="image0.jpeg" alt="Zdjęcie 1" onclick="openModal(this)">
+                        <img src="image1.jpeg" alt="Zdjęcie 2" onclick="openModal(this)">
+                        <img src="image2.jpeg" alt="Zdjęcie 3" onclick="openModal(this)">
+                        <img src="image3.jpeg" alt="Zdjęcie 4" onclick="openModal(this)">
+                        <img src="image4.jpeg" alt="Zdjęcie 5" onclick="openModal(this)">
+                        <img src="image5.jpeg" alt="Zdjęcie 6" onclick="openModal(this)">
+                        <img src="image6.jpeg" alt="Zdjęcie 7" onclick="openModal(this)">
+                        <img src="image7.jpeg" alt="Zdjęcie 8" onclick="openModal(this)">
+                        <img src="image8.jpeg" alt="Zdjęcie 9" onclick="openModal(this)">
+                        <img src="image9.jpeg" alt="Zdjęcie 10" onclick="openModal(this)">
+                        <img src="image10.jpeg" alt="Zdjęcie 11" onclick="openModal(this)">
+                        <img src="image11.jpeg" alt="Zdjęcie 12" onclick="openModal(this)">
+                        <img src="image12.jpeg" alt="Zdjęcie 13" onclick="openModal(this)">
+                        <img src="image13.jpeg" alt="Zdjęcie 14" onclick="openModal(this)">
+                        <img src="image14.jpeg" alt="Zdjęcie 15" onclick="openModal(this)">
+                        <img src="image15.jpeg" alt="Zdjęcie 16" onclick="openModal(this)">
+                        <img src="image16.jpeg" alt="Zdjęcie 17" onclick="openModal(this)">
+                    </div>
+                    <a href="index.html#gallery"><button id="toggle-btn">Pokaż mniej &#9650;</button></a>
+                <!---<button id="toggle-btn" onclick="toggleGallery()">Pokaż więcej &#9660;</button>--->
+            </section>
+
+                <div id="imageModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="modalImg">
+                    <div class="prev" onclick="changeImage(-1)">&#10094;</div>
+                    <div class="next" onclick="changeImage(1)">&#10095;</div>
+                </div>
+
+            <section id="contact" class="reveal slide"> 
+                <div id="contact-header"><h1>Skontaktuj się z nami!</h1></div>
+                <div id="contact-icons">
+                    <div class="social-icons">
+                        <a href="https://www.tiktok.com/@performance.studio.wrap" target="_blank">
+                            <i class="fab fa-tiktok"></i> PerformanceCarWrapStudio
+                        </a>
+                        <a href="https://www.instagram.com/performance_studiowrap/" target="_blank">
+                            <i class="fab fa-instagram"></i> PerformanceCarWrapStudio
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61572681411653" target="_blank">
+                            <i class="fab fa-facebook"></i> PerformanceCarWrapStudio
+                        </a>
+                    </div>
+                </div>
+            
+                <div id="map" class="reveal map-container"></div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        var map = L.map('map').setView([53.130939, 16.754552], 15); 
+                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        }).addTo(map);
+                        L.marker([53.130939, 16.754552]).addTo(map)
+                            .bindPopup('Nasza lokalizacja: Piła, Motylewska 6')
+                            .openPopup();
+                    });
+                </script>
+            </section>
+        </main>
+
+        <footer>
+            <p><strong>Oliwia Stolarczyk</strong> - 
+                <a href="tel:+48793640442">793 640 442</a>
+            </p>
+            <p><strong>Natalia Seyda</strong> - 
+                <a href="tel:+48693345043">693 345 043</a>
+            </p>
+            <p>Email: 
+                <a href="mailto:PerformanceStudioWrap@outlook.com">
+                    PerformanceStudioWrap@outlook.com
+                </a>
+            </p>
+            <p>&copy; 2025 Performance Studio. Wszelkie prawa zastrzeżone.</p>
+            <p id="author"><a href="mailto: brakes-flashy35@icloud.com">created by: Wiktor Karykowski</a></label>
+        </footer>
+    </body>
+</html>
+
