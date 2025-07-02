@@ -22,7 +22,7 @@ function centerRightSection() {
 window.addEventListener('load', centerRightSection);
 window.addEventListener('resize', centerRightSection);
 
-function adjustFontSize() {
+/*function adjustFontSize() {
     let paragraphs = document.querySelectorAll("#home-hero-container p");
 
     paragraphs.forEach(p => {
@@ -52,7 +52,7 @@ function adjustFontSize() {
 }
 
 window.addEventListener("resize", adjustFontSize);
-window.addEventListener("load", adjustFontSize);
+window.addEventListener("load", adjustFontSize);*/
 
 function scrollToNextSection() {
     const nextSection = document.querySelector("#services");

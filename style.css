@@ -1,3 +1,9 @@
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    
+}
+
 @supports (-webkit-touch-callout: none) {  
     .aboutslide::before, #home::before {
         position: absolute;
@@ -10,7 +16,7 @@
     font-style: normal;
     font-weight: normal;
     src: local('Diploma Regular'), url('Diploma.woff') format('woff');
-    }
+}
 
 html, body {
     height: 100%;
@@ -88,25 +94,23 @@ h2 {
     height: 100%;
 }
 
-#home-hero-container p {
-    font-family: 'Diploma Regular';
-    font-weight: 100;
+#home-hero-container {
+
+    font-family: 'Diploma', cursive;
     font-size: 10vh;
     color: #cc66ff;
-    text-shadow: 0 0 1px #cc66ff, 0 0 2px #a64aff, 0 0 4px #ff99ff;
+    text-shadow: 0 0 0.5px #cc66ff, 0 0 1px #a64aff, 0 0 2px #ff99ff;
     letter-spacing: 3px;
     margin: 0;
-}
-
-#home-hero-container {
+    
+    
     border: 0px solid white;
     gap: 5px;
     width: 35%;
     height: 50%;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Diploma Regular', sans-serif;
     white-space: nowrap;
     line-height: 1;
-    font-size: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -251,7 +255,7 @@ main #home h1 {
 }
 
 #contact-button {
-    background-color: #007BFF;
+    background-color: #a64aff;
     color: white;
     padding: 15px 25px;
     border: none;
@@ -266,10 +270,14 @@ main #home h1 {
 }
 
 #contact-button:hover {
-    background-color: white;
-    color: #007BFF;
-    border: 1px solid #007BFF;
+    background-color: #ff99ff;
+    color: black;
+    border: 1px solid #a64aff;
     transition: 0.3s;
+}
+
+.fas { 
+    color: #a64aff;
 }
 
 .slide {
@@ -390,6 +398,14 @@ main #home h1 {
     min-height: 15vh;
 }
 
+#contact a { 
+    color: #a64aff
+}
+
+#contact i { 
+    color: #cc66ff
+}
+
 .map-container {
     width: 100%;
     height: 180px;
@@ -460,7 +476,7 @@ main #home h1 {
         display: block;
         margin: 20px auto;
         padding: 10px 20px;
-        background-color: #007BFF;
+        background-color: #a64aff;
         color: white;
         border: none;
         cursor: pointer;
@@ -470,9 +486,9 @@ main #home h1 {
     }
 
     #toggle-btn:hover {
-        background-color: white;
-        color: #007BFF;
-        border: 1px solid #007BFF;
+        color: black;
+        background-color: #ff99ff;
+        border: 1px solid #a64aff;
     }
 
     #home { 
@@ -536,7 +552,7 @@ main #home h1 {
     .service-item i {
         font-size: 40px;
         margin-bottom: 15px;
-        color: #007BFF;
+        color: #a64aff;
     }
 
     .service-item span {
@@ -637,7 +653,7 @@ main #home h1 {
     .service-item i {
         font-size: 50px;
         margin-bottom: 20px;
-        color: #007BFF;
+        color: #a64aff;
     }
 
     .service-item span {
@@ -664,7 +680,7 @@ main #home h1 {
 .service-item i {
     font-size: 24px;
     margin-right: 15px;
-    color: #007BFF;
+    color: #a64aff;
 }
 
 #gallery { 
@@ -763,7 +779,7 @@ footer {
 }
 
 footer a {
-    color: #007BFF;
+    color: #cc66ff;
     text-decoration: none;
 }
 
@@ -791,7 +807,7 @@ footer a:hover {
 .service-item i {
     font-size: 40px;
     margin-right: 20px;
-    color: #007BFF;
+    color: #a64aff;
 }
 
 .service-item span {
